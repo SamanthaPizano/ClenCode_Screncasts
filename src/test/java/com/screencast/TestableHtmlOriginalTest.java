@@ -49,7 +49,7 @@ public class TestableHtmlOriginalTest {
 
     private void generateHtmlAndAssert(boolean includeSuiteSetup,
                                        String expectedResult) throws Exception {
-        String testableHtml = new TestableHtml_Original().testableHTML(pageData,
+        String testableHtml = new TestableHtml_Refactor().testableHTML(pageData,
                 includeSuiteSetup);
         assertThat(removeMagicNumber(testableHtml),
                 is(removeMagicNumber(expectedResult)));
